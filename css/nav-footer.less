@@ -1,0 +1,198 @@
+/* 页脚样式开始 */
+footer {
+  background-color: #06060b;
+  color: #60606d;
+  height: 300px;
+  margin-top: 20px;
+  /* 左边样式 */
+  .left {
+    .ul-1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      li {
+        width: 20%;
+        img {
+          border: 5px solid rgba(102, 136, 153, 0.18);
+          box-shadow: 0 1px 5px 5px #ebf2ff;
+          width: 100px;
+          margin-left: 76px;
+        }
+      }
+      li:nth-of-type(5) {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+  /* 左边样式结束 */
+
+  /* 右边样式开始 */
+  .right {
+    .ul-2 {
+      width: 100%;
+      display: flex;
+      li {
+        margin-left: 20px;
+      }
+    }
+    .ul-3 {
+      // background-color: red;
+      margin-top: 50px;
+      width: 100% !important;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      li {
+        // background-color: aqua;
+        width: 40%;
+        margin-top: 20px;
+        a {
+          width: 100%;
+          // background-color: red;
+          position: relative;
+          img {
+            position: absolute;
+            top: -50px;
+            left: 96px;
+            width: 100px;
+            transform: rotate3d(1, 0, 0, 90deg);
+            transition: 0.8s;
+          }
+          &:hover > img {
+            border: 5px solid rgba(102, 136, 153, 0.18);
+            box-shadow: 0 1px 5px 5px #ebf2ff;
+            transform: rotate3d(1, 0, 0, 0deg);
+          }
+          &::before {
+            font-size: 24px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+/* 页脚样式结束 */
+
+/* 屏幕大于1280 container的宽度就1280*/
+@media screen and (min-width: 1280px) {
+  footer {
+    width: 1280px;
+  }
+}
+/* 媒体结束 */
+
+/* 中等屏幕样式开始 */
+@media screen and (max-width: 1199px) {
+  footer {
+    .left {
+      .ul-1 {
+        li {
+          img {
+            width: 70px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .right {
+      .ul-3 {
+        li {
+          a {
+            img {
+              top: -30px;
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* 中等屏幕样式结束 */
+
+/* 平板样式开始 */
+@media screen and (max-width: 991px) {
+  footer {
+    height: auto;
+    .left {
+      .ul-1 {
+        // background-color: red;
+        width: 100%;
+        display: flex;
+        li {
+          img {
+            margin-left: 20px;
+          }
+          width: 25%;
+          a {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .right {
+      .ul-3 {
+        // background-color: red;
+        li {
+          a {
+            img {
+              top: -35px;
+              left: 104px;
+              transform: rotate3d(0, 0, 0, 0deg);
+              border: 5px solid rgba(102, 136, 153, 0.18);
+              box-shadow: 0 1px 5px 5px #ebf2ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* 平板样式结束 */
+
+/* 手机样式开始 */
+@media screen and (max-width: 767px) {
+  footer {
+    h3 {
+      font-size: 16px;
+    }
+    .left {
+      .ul-1 {
+        li {
+          img {
+            width: 50px;
+            margin: 10px 0 0 16px;
+          }
+        }
+      }
+      .ul-2 {
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .right {
+      .ul-3 {
+        li {
+          a {
+            &::before {
+              font-size: 16px;
+            }
+            img {
+              top: -20px;
+              width: 50px;
+              left: 95px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* 手机样式结束 */

@@ -1,0 +1,139 @@
+/* 页脚样式开始 */
+footer {
+  /* background-color: #06060b; */
+  background-color: #f5f5f5;
+  color: #60606d;
+  height: 300px;
+  margin-top: 20px;
+  /* 左边样式 */
+  /* 左边样式结束 */
+  /* 右边样式开始 */
+}
+footer .left .ul-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer .left .ul-1 li {
+  width: 20%;
+}
+footer .left .ul-1 li img {
+  border: 5px solid rgba(102, 136, 153, 0.18);
+  box-shadow: 0 1px 5px 5px #ebf2ff;
+  width: 100px;
+  margin-left: 76px;
+}
+footer .left .ul-1 li:nth-of-type(5) {
+  width: 100%;
+  margin-top: 10px;
+}
+footer .right .ul-2 {
+  width: 100%;
+  display: flex;
+}
+footer .right .ul-2 li {
+  margin-left: 20px;
+}
+footer .right .ul-3 {
+  margin-top: 50px;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer .right .ul-3 li {
+  width: 40%;
+  margin-top: 20px;
+}
+footer .right .ul-3 li a {
+  width: 100%;
+  position: relative;
+}
+footer .right .ul-3 li a img {
+  position: absolute;
+  top: -50px;
+  left: 96px;
+  width: 100px;
+  transform: rotate3d(1, 0, 0, 90deg);
+  transition: 0.8s;
+}
+footer .right .ul-3 li a:hover > img {
+  border: 5px solid rgba(102, 136, 153, 0.18);
+  box-shadow: 0 1px 5px 5px #ebf2ff;
+  transform: rotate3d(1, 0, 0, 0deg);
+}
+footer .right .ul-3 li a::before {
+  font-size: 24px;
+  margin-right: 4px;
+}
+/* 页脚样式结束 */
+/* 屏幕大于1280 container的宽度就1280*/
+@media screen and (min-width: 1280px) {
+  footer {
+    width: 1280px;
+  }
+}
+/* 媒体结束 */
+/* 中等屏幕样式开始 */
+@media screen and (max-width: 1199px) {
+  footer .left .ul-1 li img {
+    width: 70px;
+    margin-left: 5px;
+  }
+  footer .right .ul-3 li a img {
+    top: -30px;
+    width: 70px;
+  }
+}
+/* 中等屏幕样式结束 */
+/* 平板样式开始 */
+@media screen and (max-width: 991px) {
+  footer {
+    height: auto;
+  }
+  footer .left .ul-1 {
+    width: 100%;
+    display: flex;
+  }
+  footer .left .ul-1 li {
+    width: 25%;
+  }
+  footer .left .ul-1 li img {
+    margin-left: 20px;
+  }
+  footer .left .ul-1 li a {
+    display: block;
+    width: 100%;
+  }
+  footer .right .ul-3 li a img {
+    top: -35px;
+    left: 104px;
+    transform: rotate3d(0, 0, 0, 0deg);
+    border: 5px solid rgba(102, 136, 153, 0.18);
+    box-shadow: 0 1px 5px 5px #ebf2ff;
+  }
+}
+/* 平板样式结束 */
+/* 手机样式开始 */
+@media screen and (max-width: 767px) {
+  footer h3 {
+    font-size: 16px;
+  }
+  footer .left .ul-1 li img {
+    width: 50px;
+    margin: 10px 0 0 16px;
+  }
+  footer .left .ul-2 li a {
+    font-size: 12px;
+  }
+  footer .right .ul-3 li a::before {
+    font-size: 16px;
+  }
+  footer .right .ul-3 li a img {
+    top: -20px;
+    width: 50px;
+    left: 95px;
+  }
+}
+/* 手机样式结束 */
